@@ -1,0 +1,72 @@
+:root{
+	--teal: #2ec1ac;
+	--teal_hover: #279e8c;
+}
+
+*{
+	font-family: 'Poppins', sans-serif;
+}
+.h-font{
+	font-family: 'Merienda', cursive;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.costum-bg{
+	background-color: var(--teal);
+}
+.costum-bg:hover{
+	background-color: var(--teal_hover);
+}
+.h-line {
+	width: 150px;
+	margin: 0 auto;
+	height: 1.7px;
+}
+.custom-alert{
+	position: fixed;
+	top: 80px;
+	right: 25px;
+}
+
+#dashboard-menu{
+	position: fixed;
+	height: 100%;
+	z-index: 11;
+}
+@media screen and (max-width: 991px){
+	#dashboard-menu{
+		height: auto;
+		width: 100%;
+	}
+	#main-content{
+		margin-top: 60px;
+	}
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px; /* Adjust the width to make it thin */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #000; /* Set the background color to black */
+  border-radius: 4px; /* Add rounded corners for a sleeker look */
+}
+
+/* Customize the scrollbar track in Firefox */
+/* You may need to add vendor-specific CSS for Firefox */
+/* For example, Firefox uses 'scrollbar-width' property */
+/* and 'scrollbar-color' property */
+/* This is a simplified example for illustration purposes */
+.longEnough {
+  scrollbar-width: thin;
+  scrollbar-color: #000 transparent;
+}
