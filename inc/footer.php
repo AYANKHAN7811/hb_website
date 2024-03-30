@@ -124,6 +124,7 @@ jQuery(document).ready(function () {
             contentType: false,
             processData: false,
             success: function (response) {
+                console.log(response);
                 if (response=='inv_email_mob') {
                     showAlert('error','Invalid Email OR Mobile Number. !');
                 }else if (response=='not_verified') {
@@ -150,42 +151,42 @@ jQuery(document).ready(function () {
     });
 });
 
-jQuery(document).ready(function () {
-    jQuery('#forgot-form').submit(function (event) {
-        event.preventDefault();
+// jQuery(document).ready(function () {
+//     jQuery('#forgot-form').submit(function (event) {
+//         event.preventDefault();
 
-        var formData = new FormData(this);
-        formData.append('forgot_pass',""); 
+//         var formData = new FormData(this);
+//         formData.append('forgot_pass',""); 
 
-        jQuery.ajax({
-            type: 'POST',
-            url: 'ajax/login_register.php',
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function (response) {
-                console.log(response);
-                if (response=='inv_email') {
-                    showAlert('error','Invalid Email. !');
-                }else if (response=='not_verified') {
-                    showAlert('error','Email Not Varified. !');
-                }else if (response=='Inactive') {
-                    showAlert('error','Account Suspended, please contact admin. !');
-                }else if (response=='mail failed') {
-                    showAlert('error','Cannot send email, Server down. !');
-                }else if (response=='upd_failed') {
-                    showAlert('error','Account recovery failed, Server down. !');
-                }else {
-                    showAlert('success','Reset link send to email. !');
-                    forgot_form.reset();
-                }
-            },
-            error: function (error) {
-                console.log('Error: ' + error);
-            }
-        });
-    });
-});
+//         jQuery.ajax({
+//             type: 'POST',
+//             url: 'ajax/login_register.php',
+//             data: formData,
+//             contentType: false,
+//             processData: false,
+//             success: function (response) {
+//                 console.log(response);
+//                 if (response=='inv_email') {
+//                     showAlert('error','Invalid Email. !');
+//                 }else if (response=='not_verified') {
+//                     showAlert('error','Email Not Varified. !');
+//                 }else if (response=='Inactive') {
+//                     showAlert('error','Account Suspended, please contact admin. !');
+//                 }else if (response=='mail failed') {
+//                     showAlert('error','Cannot send email, Server down. !');
+//                 }else if (response=='upd_failed') {
+//                     showAlert('error','Account recovery failed, Server down. !');
+//                 }else {
+//                     showAlert('success','Reset link send to email. !');
+//                     forgot_form.reset();
+//                 }
+//             },
+//             error: function (error) {
+//                 console.log('Error: ' + error);
+//             }
+//         });
+//     });
+// });
 
 function setActive() {
     let navbar = document.getElementById('nav-bar');

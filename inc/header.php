@@ -73,7 +73,7 @@
 					</div>
 					<div class="d-flex align-items-center justify-content-between mb-2">
 						<input type="submit" name="login" class="btn btn-dark shadow-none" value="Login" data-bs-dismiss="modal">
-						<button type="button" class="btn text-secondary text-decoration-none shadow-none " data-bs-toggle="modal" data-bs-target="#forgotmodal">
+						<button type="button" class="btn text-secondary text-decoration-none shadow-none " data-bs-toggle="modal" data-bs-target="#forgotmodal" disabled>
 						Forgot Password?
 						</button>
 					</div>
@@ -149,7 +149,7 @@
 
 <!-- Forgot Password -->
 
-<div class="modal fade" id="forgotmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="forgotmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
     	<form  id="forgot-form" action="" enctype="multipart/form-data">
@@ -175,4 +175,4 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->
