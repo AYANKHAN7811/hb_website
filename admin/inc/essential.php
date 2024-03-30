@@ -1,6 +1,5 @@
 <?php 
 
-define('SENDGRID_API_KEY', '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');
 define('SITE_URL','http://localhost/hb_website/');
 define('SITE_MAIL','ayan.inayatinfotech@gmail.com');
 define('SITE_NAME','Ayan');
